@@ -1,7 +1,9 @@
 package com.Java.Basics;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-public class AddMultipleAddressBook 
+
+public class DuplicateEntries 
 {
 	Scanner scanner = new Scanner(System.in);
     AddNewContactsInAddressBook contact = new AddNewContactsInAddressBook();
@@ -125,12 +127,15 @@ public class AddMultipleAddressBook
 	}
 	public static void main(String[] args)
 	{
-		AddMultipleAddressBook obj = new AddMultipleAddressBook();
+		DuplicateEntries obj = new DuplicateEntries();
 		obj.addContact();
 		obj.showContacts();
-//		obj.editContact();
-//		obj.deleteContact();
+		obj.editContact();
+		obj.deleteContact();
 		obj.multipleAddressBook();
 		
 	}
 }
+
+
+
