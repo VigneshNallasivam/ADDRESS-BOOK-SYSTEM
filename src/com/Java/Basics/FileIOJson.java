@@ -1,12 +1,13 @@
 package com.Java.Basics;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-public class FileIOCsv 
+
+public class FileIOJson 
 {
 	/*
 	 * METHOD FOR DOING WRITE OPERATION 
@@ -18,7 +19,8 @@ public class FileIOCsv
 		String text= String.valueOf(obj);
 		StringBuffer buffer = new StringBuffer(" Hai ");
 		buffer.append(text);
-		Path fileName = Path.of("C:\\Users\\lab\\Desktop\\JAVA\\JAVA Assignments\\ADDRESS BOOK SYSTEM\\Address Book System Program\\src\\com\\Java\\Basics\\message.csv");
+		Path fileName = Path.of("C:\\Users\\lab\\Desktop\\JAVA\\JAVA Assignments\\"
+				+ "ADDRESS BOOK SYSTEM\\Address Book System Program\\src\\com\\Java\\Basics\\message.json");
 		Files.writeString(fileName, buffer);
 	}
 	/*
@@ -26,7 +28,8 @@ public class FileIOCsv
 	 */
 	public static void read() throws IOException
 	{
-		File file = new File("C:\\Users\\lab\\Desktop\\JAVA\\JAVA Assignments\\ADDRESS BOOK SYSTEM\\Address Book System Program\\src\\com\\Java\\Basics\\message.csv");
+		File file = new File("C:\\Users\\lab\\Desktop\\JAVA\\JAVA Assignments"
+				+ "\\ADDRESS BOOK SYSTEM\\Address Book System Program\\src\\com\\Java\\Basics\\message.json");
 		BufferedReader br= new BufferedReader(new FileReader(file));
 		String st;
 		while ((st = br.readLine()) != null)
@@ -42,5 +45,4 @@ public class FileIOCsv
 		write();
 		read();
 	}
-
 }
